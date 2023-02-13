@@ -7,6 +7,7 @@ struct LinkedList
 };
 typedef struct LinkedList node;
 
+//create a new list or add a new node in the last of the list
 node *addLast(node *head, int data)
 {
     node *temp = (node *)malloc(sizeof(node));
@@ -63,7 +64,7 @@ void reversePrint(node *head)
         printf("%d\t", head->data);
     }
 }
-
+//to count nodes in list
 int counter(node *head)
 {
     static int c;
@@ -76,7 +77,7 @@ int counter(node *head)
     }
     return c;
 }
-
+//to count nodes in list(by using recursion)
 int counter2(node *head)
 {
     if (head == NULL)
@@ -96,7 +97,7 @@ node *destroyList(node *head)
     }
     return head;
 }
-
+//(by using recursion)
 node *destroyListRec(node *head)
 {
     if (head == NULL)
@@ -124,7 +125,7 @@ node *deleteNode(node *head, int x)
     }
     return head;
 }
-
+//to subtract the minimum node from all of another nodes in the list
 node *substractMin(node *head)
 {
     if (head != NULL)
